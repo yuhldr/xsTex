@@ -3,13 +3,21 @@
 
 \LoadClass{ctexbeamer}
 
-\RequirePackage{fontspec}
+% \usepackage[utf8]{inputenc}
 
 % 分步动画
 \RequirePackage{arev}
 
 % 数学
-\RequirePackage{amsmath,amsfonts,amssymb,mathrsfs}
+\RequirePackage{amsmath}
+% \RequirePackage{amsfonts}
+% \RequirePackage{amssymb}
+\RequirePackage{mathrsfs}
+
+% 公式希腊字母Times New Roman 字体，冲突
+\RequirePackage{mathptmx}
+% \RequirePackage{newtxmath}
+
 
 % 图
 \RequirePackage{graphicx}
@@ -40,7 +48,7 @@
   \mathring{\text{A}}
 }
 
-\RequirePackage[backend=bibtex, isbn=false, url=false]{biblatex}
+\RequirePackage[backend=biber, isbn=false, url=false]{biblatex}
 \setbeamerfont{footnote}{size=\tiny}
 \addbibresource{database.bib}
 
@@ -52,7 +60,6 @@
 
 % 这个好简洁
 
-\usepackage[utf8]{inputenc}
 % Frankfurt Madrid
 \usetheme{Madrid}
 \usecolortheme{default}
@@ -86,11 +93,11 @@
 \setbeamercolor*{title in head/foot}{bg=Logo2,fg=white}
 
 
+\RequirePackage{fontspec}
 % 设置中文字体
 \setCJKmainfont{KaiTi}
 \setCJKsansfont{KaiTi}
 \setCJKmonofont{KaiTi}
-
 % 设置英文字体
 % https://fonts.google.com/specimen/Andika+New+Basic
 % \setmainfont{Andika New Basic}
