@@ -8,8 +8,9 @@ rm:
 install: rm
 	sudo mkdir ${TEX_PATH}
 
-	sudo ln -s ${CLS_PATH}ldrsimple.cls ${TEX_PATH}
-	sudo ln -s ${CLS_PATH}pythonhighlight.sty ${TEX_PATH}
 	sudo ln -s ${CLS_PATH}figures ${TEX_PATH}
+
+	sudo ln -s ${CLS_PATH}ppt ${TEX_PATH}
+	sudo ln -s ${CLS_PATH}poster ${TEX_PATH}
 
 	sudo mktexlsr
