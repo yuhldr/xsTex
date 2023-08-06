@@ -48,7 +48,7 @@
   \mathring{\text{A}}
 }
 
-\RequirePackage[backend=biber, isbn=false, url=false]{biblatex}
+\RequirePackage[backend=bibtex, isbn=false, url=false]{biblatex}
 \setbeamerfont{footnote}{size=\tiny}
 \addbibresource{database.bib}
 
