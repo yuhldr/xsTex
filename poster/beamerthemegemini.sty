@@ -29,14 +29,14 @@
 
 \setbeamerfont{headline}{family=\Raleway}
 \setbeamerfont{headline title}{size=\Huge,series=\bfseries}
-\setbeamerfont{headline author}{size=\Large}
-\setbeamerfont{headline institute}{size=\large}
-\setbeamerfont{block title}{family=\Raleway,size=\large,series=\bfseries}
-\setbeamerfont{block body}{size=\large} % 设置块正文的字体大小
+\setbeamerfont{headline author}{size=\huge}
+\setbeamerfont{headline institute}{size=\Large}
+\setbeamerfont{block title}{family=\Raleway,size=\huge,series=\bfseries}
+\setbeamerfont{block body}{size=\Large} % 设置块正文的字体大小
 
 \setbeamerfont{heading}{family=\Lato,series=\bfseries}
-\setbeamerfont{caption}{size=\normalsize}
-\setbeamerfont{footline}{family=\Raleway,size=\normalsize}
+\setbeamerfont{caption}{size=\large}
+\setbeamerfont{footline}{family=\Raleway,size=\large}
 
 % ====================
 % Macros
@@ -259,5 +259,14 @@
 }
 
 % 参考文献
-\usepackage[style=numeric, url=false, sorting=none, backend=bibtex]{biblatex}
+\RequirePackage[style=numeric, url=false, sorting=none, backend=bibtex]{biblatex}
 \addbibresource{database.bib}
+
+
+\RequirePackage{graphicx}
+\graphicspath{{images/}{figures/}{../figures/}{/usr/local/texlive/texmf-local/tex/latex/yuh/figures/}}
+\RequirePackage{booktabs}
+\RequirePackage{tikz}
+\RequirePackage{pgfplots}
+\pgfplotsset{compat=1.14}
+\RequirePackage{anyfontsize}

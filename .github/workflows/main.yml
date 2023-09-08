@@ -1,0 +1,53 @@
+name: AutoPkg
+
+on:
+  push:
+    branches: [ "master" ]
+  pull_request:
+    branches: [ "master" ]
+
+
+env:
+  TAG_NAME: "自动打包"
+
+
+jobs:
+  build-ldr-linux:
+    runs-on: ubuntu-latest
+    steps:
+    - name: update
+      run: sudo apt-get update -y
+    - name: install
+      run: >-
+        sudo apt-get install -y
+        texlive-latex-extra
+        texlive-fonts-recommended
+        texlive-fonts-extra
+        lmodern
+        texlive-luatex
+        texlive-xetex
+    - uses: actions/checkout@v3
+    - name: build-ppt
+      run: |
+        mkdir -p ppt/figures
+        cp figures/lzu_logo_white.png ppt/figures/
+        cp figures/lzu_logo_w.png  ppt/figures/
+        cp example/ppt.tex ppt/
+        cp example/database.bib ppt/
+
+    - name: build-poster
+      run: |
+        mkdir -p poster/figures
+        cp figures/lzu_logo_white.png poster/figures/
+        cp example/poster.tex poster/
+        cp example/database.bib poster/
+
+    - name: Create Release and Upload Release Asset
+      uses: softprops/action-gh-release@v1
+      with:
+        tag_name: ${{ env.TAG_NAME }}
+        prerelease: true
+        draft: false
+        body_path: md/auto_body.md
+        files: |
+          disk/*

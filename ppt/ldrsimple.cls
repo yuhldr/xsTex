@@ -21,7 +21,7 @@
 
 % 图
 \RequirePackage{graphicx}
-\graphicspath{{images/}{/usr/local/texlive/texmf-local/tex/latex/yuh/figures/}}
+\graphicspath{{images/}{figures/}{../figures/}{/usr/local/texlive/texmf-local/tex/latex/yuh/figures/}}
 
 
 % 图片复杂排版，可以每个图自定义标题
@@ -48,7 +48,7 @@
   \mathring{\text{A}}
 }
 
-\RequirePackage[backend=biber, isbn=false, url=false]{biblatex}
+\RequirePackage[backend=bibtex, isbn=false, url=false]{biblatex}
 \setbeamerfont{footnote}{size=\tiny}
 \addbibresource{database.bib}
 
