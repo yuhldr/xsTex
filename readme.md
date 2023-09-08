@@ -57,6 +57,23 @@
 
 - 查看文档
 
-    ```bash
-    texdoc biblatex
-    ```
+```bash
+texdoc biblatex
+```
+
+font
+
+- [lato](https://www.fontsquirrel.com/fonts/download/lato)
+- [raleway](https://www.fontsquirrel.com/fonts/download/raleway)
+
+ba下载的字体解压到下面的目录
+
+```bash
+mkdir ~/.fonts/tex
+```
+
+生效
+
+```bash
+mkfontscale && mkfontdir && fc-cache -fv
+```
