@@ -1,15 +1,19 @@
-TEX_PATH = ~/.texlive/texmf-var/yuh/
-CLS_PATH = ../../../code/my/tex/xsTex/
+TEX_PATH = /usr/share/texmf-dist/tex/ldr/
+CLS_PATH = /home/yuh/code/my/tex/xsTex/
+# TEX_PATH = /usr/local/texlive/texmf-local/tex/latex/yuh/
+# CLS_PATH = ../../../../../../my/tex/cls/
 
 rm:
-	rm -rf ${TEX_PATH}
+	sudo rm -rf ${TEX_PATH}
 
 
 install: rm
-	mkdir ${TEX_PATH}
-	ln -s ${CLS_PATH}figures ${TEX_PATH}
-	ln -s ${CLS_PATH}ppt ${TEX_PATH}
-	ln -s ${CLS_PATH}poster ${TEX_PATH}
+	sudo mkdir ${TEX_PATH}
 
-	mktexlsr
+	sudo ln -s ${CLS_PATH}figures ${TEX_PATH}
+
+	sudo ln -s ${CLS_PATH}ppt ${TEX_PATH}
+	sudo ln -s ${CLS_PATH}poster ${TEX_PATH}
+
+	sudo mktexlsr
 	# sudo texhash
