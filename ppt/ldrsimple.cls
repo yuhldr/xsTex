@@ -95,9 +95,15 @@
 
 \RequirePackage{fontspec}
 % 设置中文字体
-\setCJKmainfont{KaiTi}
-\setCJKsansfont{KaiTi}
-\setCJKmonofont{KaiTi}
+\setCJKmainfont{Microsoft YaHei}
+\setCJKsansfont{Microsoft YaHei}
+\setCJKmonofont{Microsoft YaHei}
+% \setCJKmainfont{SimHei}
+% \setCJKsansfont{SimHei}
+% \setCJKmonofont{SimHei}
+% \setCJKmainfont{KaiTi}
+% \setCJKsansfont{KaiTi}
+% \setCJKmonofont{KaiTi}
 % 设置英文字体
 % https://fonts.google.com/specimen/Andika+New+Basic
 % \setmainfont{Andika New Basic}
