@@ -18,6 +18,7 @@
 \RequirePackage{mathptmx}
 % \RequirePackage{newtxmath}
 
+\RequirePackage{pgffor}
 
 % 图
 \RequirePackage{graphicx}
