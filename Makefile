@@ -14,6 +14,7 @@ install: rm
 
 	sudo ln -s ${CLS_PATH}ppt ${TEX_PATH}
 	sudo ln -s ${CLS_PATH}poster ${TEX_PATH}
+	sudo ln -s ${CLS_PATH}book ${TEX_PATH}
 
 	sudo mktexlsr
 	# sudo texhash
