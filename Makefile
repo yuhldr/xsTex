@@ -1,20 +1,23 @@
-TEX_PATH = /usr/share/texmf-dist/tex/ldr/
+TEX_PATH = /home/yuh/code/apps/texlive/texmf-local/
 CLS_PATH = /home/yuh/code/my/tex/xsTex/
-# TEX_PATH = /usr/local/texlive/texmf-local/tex/latex/yuh/
-# CLS_PATH = ../../../../../../my/tex/cls/
 
 rm:
-	sudo rm -rf ${TEX_PATH}
-
+	rm -rf ${TEX_PATH}/tex/ldr/
+	rm -rf ${TEX_PATH}/bibtex/bst/ldr/
 
 install: rm
-	sudo mkdir ${TEX_PATH}
+	mkdir ${TEX_PATH}/tex/ldr/
 
-	sudo ln -s ${CLS_PATH}figures ${TEX_PATH}
+	ln -s ${CLS_PATH}figures ${TEX_PATH}/tex/ldr/
+	ln -s ${CLS_PATH}ppt ${TEX_PATH}/tex/ldr/
+	ln -s ${CLS_PATH}poster ${TEX_PATH}/tex/ldr/
+	ln -s ${CLS_PATH}book ${TEX_PATH}/tex/ldr/	
+	ln -s ${CLS_PATH}article ${TEX_PATH}/tex/ldr/
+	ln -s ${CLS_PATH}resume ${TEX_PATH}/tex/ldr/
 
-	sudo ln -s ${CLS_PATH}ppt ${TEX_PATH}
-	sudo ln -s ${CLS_PATH}poster ${TEX_PATH}
-	sudo ln -s ${CLS_PATH}book ${TEX_PATH}
+	mkdir ${TEX_PATH}/bibtex/bst/ldr/
+
+	ln -s ${CLS_PATH}data ${TEX_PATH}/bibtex/bst/ldr/
 
 	sudo mktexlsr
-	# sudo texhash
+	# texhash
