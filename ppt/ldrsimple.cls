@@ -79,7 +79,7 @@
   \begin{beamercolorbox}[wd=\paperwidth, ht=0.75cm]{titlebar}
     \strut\hskip 12pt \raisebox{1mm}{\zihao{3}\insertframetitle}\strut
     \hfill
-    \includegraphics[width=2.8cm]{lzu_logo_w}
+    \includegraphics[width=2.8cm]{lzu_logo_w_white.pdf}
   \end{beamercolorbox}
 }
 
@@ -135,4 +135,4 @@
 
 
 % \logo{\includegraphics[height=1cm]{lzu_logo.png}}
-\titlegraphic{\includegraphics[height=1.5cm]{lzu_logo.png}}
+\titlegraphic{\includegraphics[height=1.5cm]{lzu_logo.pdf}}
