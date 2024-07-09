@@ -79,7 +79,8 @@
   \begin{beamercolorbox}[wd=\paperwidth, ht=0.75cm]{titlebar}
     \strut\hskip 12pt \raisebox{1mm}{\zihao{3}\insertframetitle}\strut
     \hfill
-    \includegraphics[width=2.8cm]{lzu_logo_w_white.pdf}
+    \includegraphics[width=2cm]{lzu_logo_w_white.pdf}
+    \hspace{5pt}
   \end{beamercolorbox}
 }
 
