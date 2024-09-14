@@ -3,7 +3,7 @@
 
 \LoadClass{ctexbeamer}
 
-% \usepackage[utf8]{inputenc}
+% \RequirePackage[utf8]{inputenc}
 
 % 分步动画
 \RequirePackage{arev}
@@ -20,14 +20,40 @@
 
 \RequirePackage{pgffor}
 
+% 表格合并
+\RequirePackage{multirow}
+\RequirePackage{tcolorbox}
+\RequirePackage{xcolor}
+
+% 插入代码
+\RequirePackage{listings}
+
+\lstset{
+  frame=shadowbox,
+  basicstyle=\footnotesize\ttfamily,  % 使用较小的等宽字体
+  keywordstyle=\color{blue},  % 关键字字体颜色
+  commentstyle=\color{gray}, % 注释字体颜色
+  stringstyle=\color{red},
+  breaklines=true,
+}
+
+
+\linespread{1.2}  % 设置全局行间距
+\setlength{\parskip}{0.3em}  % 设置段落间距
+
+%item style
+\RequirePackage{enumitem}
+\setlist[itemize]{itemsep=0.2em, parsep=0.2em, label=\textbullet, topsep=0.5em}
+
 % 图
 \RequirePackage{graphicx}
 \graphicspath{{images/}{figures/}{../figures/}{/usr/local/texlive/texmf-local/tex/latex/yuh/figures/}}
 
 
 % 图片复杂排版，可以每个图自定义标题
-\usepackage{subfigure}
-\usepackage{float}
+% \RequirePackage{subfigure}
+% \RequirePackage{float}
+\RequirePackage{subfig}
 
 
 % 三线表格
@@ -100,24 +126,16 @@
 \setCJKmainfont{Microsoft YaHei}
 \setCJKsansfont{Microsoft YaHei}
 \setCJKmonofont{Microsoft YaHei}
-% \setCJKmainfont{SimHei}
-% \setCJKsansfont{SimHei}
-% \setCJKmonofont{SimHei}
-% \setCJKmainfont{KaiTi}
-% \setCJKsansfont{KaiTi}
-% \setCJKmonofont{KaiTi}
+
 % 设置英文字体
-% https://fonts.google.com/specimen/Andika+New+Basic
-% \setmainfont{Andika New Basic}
-% \setsansfont{Andika New Basic}
 \setmainfont{Times New Roman}
 \setsansfont{Times New Roman}
-% \setmonofont{Andika New Basic}
-% \setmonofont{Cascadia Code}
+
 % 代码字体
 % https://fonts.google.com/specimen/Ubuntu+Mono
 % \setmonofont{Ubuntu Mono}
-% \setmonofont{Times New Roman}
+
+% https://github.com/microsoft/cascadia-code
 \setmonofont{Cascadia Mono}
 
 

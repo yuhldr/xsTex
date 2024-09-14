@@ -37,10 +37,74 @@
 
     This is an example with a \href{https://www.example.com}{link}.
 
-\begin{equation}
-    Y=S
-\end{equation}
+    \begin{equation}
+        Y=S
+    \end{equation}
 
+\end{frame}
+
+
+\begin{frame}{文本段落等间距}
+    这是段落间距
+
+    Linux内核，常见发行版：Ubuntu-LTS、openSUSE-Leap，文本行间距测试查看，文本行间距测试查看，文本行间距测试查看
+    \begin{itemize}
+        \item 最外层为根目录 /，普通用户不可访问
+        \item 所有人数据都在 /home/，比如yuh用户文件在 /home/yuh，用户自己可以通过 $\thicksim/$ 代表自己这个目录，此目录自己有完全权限，无法访问其他人数据
+    \end{itemize}
+
+    测试一下图文间距
+
+    \includegraphics[width=0.4\textwidth]{lzu_logo_w.pdf}
+
+\end{frame}
+
+
+\section{常用示例}
+
+\begin{frame}{表格合并}
+    \begin{table}
+        \begin{tabular}{c|c|c|c|c|c}
+            \toprule 节点                  & 分区                    & 最大运行时间               & CPU线程数               & 内存                     & 购买年份                   \\
+            \midrule node1               & \multirow{2}{*}{ptt1} & \multirow{4}{*}{无限制} & \multirow{8}{*}{144} & \multirow{2}{*}{1007G} & \multirow{8}{*}{2018年} \\
+            \cline{1-1} node2            &                       &                      &                      &                        &                        \\
+            \cline{1-2}\cline{5-5} node3 & \multirow{2}{*}{ptt2} &                      &                      & \multirow{6}{*}{251G}  &                        \\
+            \cline{1-1} node4            &                       &                      &                      &                        &                        \\
+            \cline{1-3} node5            & \multirow{4}{*}{ptt3} & \multirow{4}{*}{14天} &                      &                        &                        \\
+            \cline{1-1} node6            &                       &                      &                      &                        &                        \\
+            \cline{1-1} node7            &                       &                      &                      &                        &                        \\
+            \cline{1-1} node8            &                       &                      &                      &                        &                        \\
+            \bottomrule
+        \end{tabular}
+    \end{table}
+
+\end{frame}
+
+
+
+\begin{frame}{插入代码}
+    建议使用 sbatch
+    \lstinputlisting[language=Bash]{data/lammps.sh}
+\end{frame}
+
+\begin{frame}{图多标题}
+文本位置文本位置文本位置文本位置文本位置文本位置文本位置
+    \begin{figure}[H]
+        \centering
+        \caption{总标题}
+        \subfloat[分标题1]{
+            \includegraphics[width=0.48\textwidth]{lzu_logo_w.pdf}
+        }
+        \subfloat[分标题2]{
+            \includegraphics[width=0.15\textwidth]{lzu_logo.pdf}
+        }\\
+        \subfloat[分标题3]{
+            \includegraphics[width=0.48\textwidth]{lzu_logo_w.pdf}
+        }
+        \subfloat[分标题3]{
+            \includegraphics[width=0.15\textwidth]{lzu_logo.pdf}
+        }
+    \end{figure}
 \end{frame}
 
 
