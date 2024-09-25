@@ -19,5 +19,5 @@ install: rm
 
 	ln -s ${CLS_PATH}data ${TEX_PATH}/bibtex/bst/ldr/
 
-	sudo mktexlsr
+	mktexlsr
 	# texhash
