@@ -492,6 +492,20 @@
 \setlength{\belowcaptionskip}{6pt}
 
 
+\RequirePackage{gbt7714}
+\newtoks\bibdatabase
+\newcommand{\printbib}{
+    \zihao{5}
+    \bibliographystyle{gbt7714-numerical}
+    \cleardoublepage
+    \phantomsection
+    \addcontentsline{toc}{chapter}{参考文献}
+    \bibliography{\the \bibdatabase}
+    \nocite{*} % 这个命令使得所有未被引用的参考文献也会被列出
+}
+
+
+
 % 修复url打乱引文格式问题，修改url字体使其符合文件规定
 \urlstyle{rm}
 \def\UrlBreaks{\do\A\do\B\do\C\do\D\do\E\do\F\do\G\do\H\do\I\do\J
