@@ -75,10 +75,11 @@
   \mathring{\text{A}}
 }
 
-\RequirePackage[backend=bibtex, isbn=false, url=false]{biblatex}
+\RequirePackage[backend=biber, style=gb7714-2015, gbnamefmt=lowercase, url=false, doi=false]{biblatex}
+\addbibresource{ref.bib}
 \setbeamerfont{footnote}{size=\tiny}
-\addbibresource{database.bib}
 
+% \printbibliography
 
 
 %============================ 我自己用的一些小命令 =========%

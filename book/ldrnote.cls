@@ -207,9 +207,7 @@
 \RequirePackage{tablefootnote}
 % 可以换页的表格
 \RequirePackage{longtable}
-% 连续参考文献横杠连接
-\RequirePackage{cite}
-\newcommand{\upcite}[1]{\textsuperscript{\cite{#1}}}
+
 
 
 % 3.图或表的目录。图和表应有序号，序号与名称之间空1个字符间隙，并与正文保持一致。“图/表目录”三个字字体为黑体，三号，居中；标题字体为宋体，四号，如“图1.1本科生总体数据分析”。标题文字居左，页码居右，之间用连续点连接。
@@ -492,16 +490,14 @@
 \setlength{\belowcaptionskip}{6pt}
 
 
-\RequirePackage{gbt7714}
-\newtoks\bibdatabase
+\RequirePackage[backend=biber, style=gb7714-2015, gbnamefmt=lowercase, url=false, doi=false]{biblatex}
+\addbibresource{ref.bib}
 \newcommand{\printbib}{
     \zihao{5}
-    \bibliographystyle{gbt7714-numerical}
     \cleardoublepage
     \phantomsection
     \addcontentsline{toc}{chapter}{参考文献}
-    \bibliography{\the \bibdatabase}
-    \nocite{*} % 这个命令使得所有未被引用的参考文献也会被列出
+    \printbibliography
 }
 
 

@@ -8,8 +8,8 @@
 
 你可以直接下载这个项目，然后
 
-- 把 [example/ppt.tex](example/ppt.tex) 和 [example/database.bib](example/database.bib) 复制在在 `ppt文件夹` 里写ppt，
-- 把 [example/poster.tex](example/poster.tex) 和 [example/database.bib](example/database.bib) 复制在 `poster文件夹` 里写学术海报
+- 在 [example/ppt](example/ppt) 里写ppt，
+- 在 [example/book/code](example/book/code) 和 [example/book/um](example/book/um) 里写简单的册子
 
 也可以参考 [Makefile](Makefile) 文件（按照linux写的），永久添加到系统 `texlive` 里，再也不需要每次写都到处找模板文件了
 
@@ -20,16 +20,24 @@
 - 编译方法：`xelatex` 四步走
 
     ```bash
-    xelatex -> bibtex -> xelatex -> xelatex
+    xelatex -> biber -> xelatex -> xelatex
     ```
 
-- 使用例子见 [ppt.tex](example/poster.tex)
-- 预览见 [poster.pdf](example/poster.pdf)
+- 使用例子见 [ppt.tex](example/ppt/ppt.tex)
+- 预览见 [ppt.pdf](example/ppt/ppt.pdf)
+
+## 小册子
+
+> 比如软件著作权申请材料
+
+
+- [example/book/code](example/book/code) 著作权代码
+- [example/book/um](example/book/um) 著作权软件说明书
 
 
 ## 学术海报
 
-> 修改自 [Gemini theme](https://github.com/anishathalye/gemini)
+> 下面说明有问题后续修改，修改自 [Gemini theme](https://github.com/anishathalye/gemini)
 
 
 - 编译方法：`lualatex` 四步走
@@ -46,13 +54,13 @@
 - 查看文件位置
 
     ```bash
-    kpsewhich beamerouterthemeinfolines.sty
+    kpsewhich beamerthemegemini.sty
     ```
 
 - 更新文件数据库
 
     ```bash
-    sudo mktexlsr
+    mktexlsr
     ```
 
 - 查看文档
