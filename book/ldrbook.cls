@@ -4,6 +4,7 @@
 
 
 \newtoks\appversion
+\newtoks\titleEn
 \newtoks\subtitle
 
 %============================ 一些章节的配置文件 =========%
@@ -324,33 +325,58 @@
 \RequirePackage{pgffor}
 \RequirePackage{forloop}
 \RequirePackage{xstring}
+
+% 封面页
+
+\makeatletter
+\let\coverlogo\@empty
+\newcommand{\setcoverlogo}[1]{\def\coverlogo{#1}}
+
+\newcommand{\coverlogowidth}{4.2cm}
+\newcommand{\coverlogovspace}{0.9cm}
 \renewcommand\maketitle{%
     \cleardoublepage
-    \thispagestyle{empty}
-    \begin{center}
-        % \includegraphics[width=6cm]{lzu2007.png}\\
-        \vspace*{21.8pt}
+    \begin{titlepage}
+        \thispagestyle{empty}
+        \centering
 
-        {\zihao{0}\bfseries\heiti{\@title\\}}
-        \vspace{24pt}
-        {\ziju{2}\zihao{2}\songti{(V\the\appversion)}}
-        \vspace{48pt}
+        \vspace*{1.2cm}
 
-        \StrLen{\the\subtitle}[\totalLength]
-        \foreach \n in {1,...,\totalLength}{
-                \StrChar{\the\subtitle}{\n}[\currentChar]
-                {\ziju{2}\zihao{0} \songti{\currentChar\\}}
-                \vspace{16pt}
-            }
+        {\zihao{0}\heiti\bfseries \@title\par}
+        \vspace{0.6cm}
+        {\zihao{2}\songti\ziju{0.5}\the\subtitle\par}
+        \vspace{0.35cm}
+        {\zihao{4}\songti (\the\appversion)\par}
 
-        \vspace*{72pt}
+        \vspace{0.8cm}
+        \rule{0.55\textwidth}{0.5pt}\par
+        \vspace{0.8cm}
 
-        \par
-        \vspace{80pt}
-        {\ziju{0}\zihao{2} \songti{\@author}}
-    \end{center}
-    \clearpage
+        {\zihao{-3}\songti\ziju{0.5}\the\titleEn\par}
+
+        \vspace*{\fill}
+
+        % Logo：页面中部
+        \ifx\coverlogo\@empty
+        \else
+            \IfFileExists{\coverlogo}{%
+                \includegraphics[width=\coverlogowidth]{\coverlogo}\par
+            }{%
+                \typeout{[Cover] Logo file not found: \coverlogo}%
+            }%
+        \fi
+
+        \vspace*{\fill}
+
+        {\zihao{3}\songti \@author\par}
+        \vspace{0.25cm}
+        {\zihao{4}\songti \today\par}
+
+        \vspace*{1.0cm}
+    \end{titlepage}
+    \cleardoublepage
 }
+
 
 
 
