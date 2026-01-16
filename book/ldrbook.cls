@@ -50,7 +50,7 @@
 \@ifclasslater{ctexbook}{2011/03/13}
 {%
     \ctexset{
-        % chapter/fixskip = true,
+        chapter/fixskip = true,
         contentsname={目\quad 录}
     }
 }
@@ -258,6 +258,7 @@
     \cfoot[C]{\thepage} %
     \renewcommand{\thepage}{\Roman{page}}
 }
+
 \appto\frontmatter{\pagestyle{frontmatterstyle}}
 
 \DeclareOption{doublelines}{
@@ -267,8 +268,8 @@
 
 \fancypagestyle{mainmatterstyle}{
     \fancyhf{}
-    \lhead{\zihao{-5}\the\subtitle}%
-    \rhead{\zihao{-5}\@title V\the\appversion}
+    \lhead{\zihao{-5}\@title}%
+    \rhead{\zihao{-5}\the\subtitle \the\appversion}
     % Footers
     \fancyfoot{} % clear all footer fields
     % 页码。页脚居中排，字体为宋体，五号。封面、目录不编排页码，中英文摘要页用罗马数字单独连续编号，引言、正文用阿拉伯数字连续编号，附录可不编排页码
@@ -396,7 +397,7 @@
 %自动写入pdf信息
 \AtBeginDocument{
     \hypersetup{
-        pdftitle = {\@title V\the\appversion},
+        pdftitle = {\@title \the\appversion},
         pdfauthor = {\@author},
         pdfsubject = {\the\subtitle}
     }
