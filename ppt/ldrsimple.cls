@@ -38,8 +38,8 @@
 }
 
 
-\linespread{1.2}  % 设置全局行间距
-\setlength{\parskip}{0.3em}  % 设置段落间距
+\linespread{1.25}  % 设置全局行间距
+\setlength{\parskip}{0.5em}  % 设置段落间距
 
 %item style
 \RequirePackage{enumitem}
